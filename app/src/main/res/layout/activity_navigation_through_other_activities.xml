@@ -6,55 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".NavigationThroughOtherActivities">
 
-    <TextView
-        android:id="@+id/_3layouts"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:text="Signin facility introducing 3 layouts and intent to change activities and transfer data between them =>"
-        android:textColor="@color/dark_salmon"
-        android:textSize="20sp"
-        android:textStyle="bold"
+
+    <GridView
+        android:horizontalSpacing="5sp"
+        android:verticalSpacing="5sp"
+        android:id="@+id/navigatorGrid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/_foodMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:text="Food Menu using checkboxes and radio button =>"
-        android:textColor="@color/dark_orchid"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/_3layouts" />
-
-    <TextView
-        android:id="@+id/_onOffSwitches"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Toggle Button And SwitchCompats With Card View =>"
-        android:textColor="@color/lime_green"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/_foodMenu" />
-
-    <TextView
-        android:id="@+id/_datepicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="Date and Time Picker =>"
-        android:textColor="@color/deep_pink"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/_onOffSwitches" />
 </androidx.constraintlayout.widget.ConstraintLayout>
