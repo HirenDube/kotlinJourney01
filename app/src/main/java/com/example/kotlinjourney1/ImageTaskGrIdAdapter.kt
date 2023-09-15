@@ -1,15 +1,14 @@
 package com.example.kotlinjourney1
 
 import android.content.Context
-import android.graphics.Color
-import android.graphics.Typeface
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.TextView
+import android.widget.ImageView
+import com.squareup.picasso.Picasso
 
-class NavigatingGridAdapter(context: Context, _itemList: List<String>, ) : BaseAdapter() {
+class ImageTaskGrIdAdapter(context: Context, _itemList: List<String>, ) : BaseAdapter() {
     var itemList = _itemList
     var context = context
 
@@ -31,18 +30,11 @@ class NavigatingGridAdapter(context: Context, _itemList: List<String>, ) : BaseA
         var layout = convertView
         layoutInflator = layoutInflator ?: context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
-        layout = layout ?: layoutInflator!!.inflate(R.layout.item_layout,null)
+        layout = layout ?: layoutInflator!!.inflate(R.layout.image_task_grid_layout,null)
 
-        var pageDetails : TextView = layout!!.findViewById(R.id.pageDetails)
-        pageDetails.text = itemList[position]
-        if(position%2==1){
-            pageDetails.setTextColor(Color.RED)
-            pageDetails.setTypeface(Typeface.DEFAULT)
+        var pageImage : ImageView = layout!!.findViewById(R.id.gridImage)
+        Picasso.get().load(itemList[position]).into(pageImage);
 
-        }else{
-            pageDetails.setTextColor(Color.GREEN)
-            pageDetails.setTypeface(Typeface.DEFAULT_BOLD)
-        }
         return layout
     }
 }

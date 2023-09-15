@@ -20,11 +20,13 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:text="Item 1"
-               android:textColor="@color/yellow"
-               android:textSize="30sp"
+               android:textColor="@color/lime"
+               android:textSize="22sp"
+               android:fontFamily="monospace"
                android:textStyle="bold" />
 
            <ImageView
+               android:id="@+id/pageImage"
                android:layout_marginLeft="2sp"
                android:layout_width="50dp"
                android:layout_height="50dp"
